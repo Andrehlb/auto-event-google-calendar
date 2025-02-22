@@ -4,7 +4,7 @@ from googleapiclient.discovery import build
 # Caminho para a chave JSON da conta de serviço
 SERVICE_ACCOUNT_FILE = r"C:\Users\GitHub-Repos\auto-event-google-calendar\robotic-aviary-441207-f8-7a7e939b58d5.json"
 
-SCOPES = ["https://www.googleapis.com/auth/calendar"]
+SCOPES = ["https://www.googleapis.com/auth/calendar.readonly", "https://www.googleapis.com/auth/gmail.readpnly"]
 
 credentials = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE, scopes=SCOPES
