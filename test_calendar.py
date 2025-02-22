@@ -1,8 +1,14 @@
-from google.oauth2 import service_account
+import datetime
+import os.path
+
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalleAppFlow
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 
 # Caminho para a chave JSON da conta de serviço
-SERVICE_ACCOUNT_FILE = r"C:\Users\GitHub-Repos\auto-event-google-calendar\robotic-aviary-441207-f8-7a7e939b58d5.json"
+# SERVICE_ACCOUNT_FILE = r"C:\Users\GitHub-Repos\auto-event-google-calendar\robotic-aviary-441207-f8-7a7e939b58d5.json"
 
 SCOPES = ["https://www.googleapis.com/auth/calendar.readonly", "https://www.googleapis.com/auth/gmail.readpnly"]
 
